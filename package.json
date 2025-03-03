@@ -1,0 +1,65 @@
+{
+  "name": "archicode-generator",
+  "displayName": "ArchiCode Generator",
+  "description": "DDD Code Generator é uma ferramenta poderosa para desenvolvedores que trabalham com Domain-Driven Design (DDD) e Clean Architecture. Esta extensão para o Visual Studio Code automatiza a criação de código para as principais camadas de um projeto, como Entidades, Repositórios, Casos de Uso e Controladores, acelerando o desenvolvimento e garantindo uma estrutura bem definida e organizada.",
+  "version": "0.0.1-BETA",
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "ddd-generator.createProjectStructure",
+        "title": "DDD: Create Project Structure"
+      },
+      {
+        "command": "ddd-generator.createEntity",
+        "title": "DDD: Create Entity"
+      },
+      {
+        "command": "ddd-generator.createRepository",
+        "title": "DDD: Create Repository"
+      },
+      {
+        "command": "ddd-generator.createUseCase",
+        "title": "DDD: Create Use Case"
+      },
+      {
+        "command": "ddd-generator.createController",
+        "title": "DDD: Create Controller"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run package",
+    "compile": "yarn run check-types && yarn run lint && node esbuild.js",
+    "watch": "npm-run-all -p watch:*",
+    "watch:esbuild": "node esbuild.js --watch",
+    "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
+    "package": "yarn run check-types && yarn run lint && node esbuild.js --production",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "yarn run compile-tests && yarn run compile && yarn run lint",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.97.0",
+    "@typescript-eslint/eslint-plugin": "^8.22.0",
+    "@typescript-eslint/parser": "^8.22.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "esbuild": "^0.25.0",
+    "eslint": "^9.19.0",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.7.3"
+  }
+}
