@@ -9,9 +9,26 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+  ],
   "main": "./dist/extension.js",
   "contributes": {
+    "configuration": {
+      "title": "ArchiCode Generator",
+      "properties": {
+        "ddd-generator.language": {
+          "type": "string",
+          "default": "typescript",
+          "enum": ["typescript", "csharp", "java"],
+          "description": "Define a linguagem padrão para a geração de código."
+        },
+          "ddd-generator.packageName": {
+          "type": "string",
+          "default": "com.example.domain",
+          "description": "Define o nome do pacote para projetos Java."
+        }
+      }
+    },
     "commands": [
       {
         "command": "ddd-generator.createProjectStructure",
@@ -32,6 +49,10 @@
       {
         "command": "ddd-generator.createController",
         "title": "DDD: Create Controller"
+      },
+      {
+        "command": "ddd-generator.changeLanguage",
+        "title": "DDD: Change Language"
       }
     ]
   },

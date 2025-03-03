@@ -2,6 +2,13 @@
 
 All notable changes to the "archicode-generator" extension will be documented in this file.
 
+## [0.0.2-BETA]
+
+### Adicionado
+- Seleção de linguagem padrão para o workspace.
+- Criação automatica da estrutura do projeto baseado na lingagem setada previamente.
+- Customização do pacote java.
+
 ## [0.0.1-BETA]
 
 ### Adicionado
