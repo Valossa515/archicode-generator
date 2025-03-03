@@ -2,7 +2,7 @@
   "name": "archicode-generator",
   "displayName": "ArchiCode Generator",
   "description": "DDD Code Generator é uma ferramenta poderosa para desenvolvedores que trabalham com Domain-Driven Design (DDD) e Clean Architecture. Esta extensão para o Visual Studio Code automatiza a criação de código para as principais camadas de um projeto, como Entidades, Repositórios, Casos de Uso e Controladores, acelerando o desenvolvimento e garantindo uma estrutura bem definida e organizada.",
-  "version": "0.0.1-BETA",
+  "version": "0.0.2-BETA",
   "engines": {
     "vscode": "^1.97.0"
   },
